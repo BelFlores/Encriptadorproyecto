@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Encriptador</title>
+                <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+                    
+                    
+                <!--The <section> tag defines a section in a document.-->
+                <header class="header">
+                        <img class="Logo" src="./assets/Logo.png" alt="Logo de alura">
+                </header>                    
+                <main class="Pantalla">        
+                        <section class="Pantalla__Contenido">
+                                <!--<img class="Logo" src="./assets/Logo.png" alt="Logo de alura">-->
+                                <textarea id="myInput" placeholder="Ingresa tu texto aquí" required></textarea>
+                                    
+                                <section class="Menu">
+                                            <div class="advertencia">
+                                                    <h2 class="advertencia__señal"><img class="letras" src="./assets/bi_exclamation-circle-fill.png">
+                                                    Solo letras minúsculas y sin acentos  </h2>
+                                            </div>
+                                    
+                                            <button class="Botones" onclick="Encriptarpalabra();" id="Encriptar" >Encriptar</button>
+                                            <button class="Botones" onclick="Desencriptarpalabra();" id="Desencriptar">Desencriptar</button>
+                                            <section id="rectangulotablet">
+                                                        <h1>Ningún mensaje fue encontrado</h1>
+                                                        <h2>Ingresa el texto que desees encriptar o desencriptar.</h2>
+                                                        <p class="Error" id="error2"></p>
+                                            </section>
+                                </section>
+                        </section>
+                        <section class="rectangulo" id="rectanguloOriginal">
+                                <img class="Muñeco" src="./assets/Muñeco.png">
+                                <h1>Ningún mensaje fue encontrado</h1>
+                                <h2>Ingresa el texto que desees encriptar o desencriptar.</h2>
+                                <p class="Error" id="error1"></p>
+                        </section>
+                </main>
+                <footer class="footer">
+                </footer>
+                <script src="app.js" defer></script>
+        </body>
+    </html>

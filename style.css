@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root
+{
+    --color-fondo:#E5E5E5;
+    --color-uno: #0A3871;
+    --color-dos:#ffffff;
+    --color-tres:#D8DFE8;
+    --color-negro:#343A40;
+    --color-gris:#495057;
+    --fuente-inter:"Inter", sans-serif;
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+/* * sigmnifica cambio universal investigar reset de CSS*/
+html 
+{
+    font-size:1.5vw;
+}
+
+body
+{
+    height: 100vh;
+    position:relative;
+    background-color: var(--color-fondo);
+    /*viewportheight que el body ocupe el 100% de altura de la pagina*/
+    /*box-sizing: border-box;*/
+}
+
+.header
+{
+    background-color: var(--color-fondo);
+    height: 1%; /* Altura del header */
+
+}
+.Logo
+{
+    margin-top: 4%;
+    margin-left: 1%;
+    margin-bottom: 8%;
+    width:8%;
+    height:auto;
+}
+.Pantalla
+{
+    background-color: var(--color-fondo);
+    display:flex;
+    justify-content:space-between;
+    margin-right: 2%;
+    
+}
+.Pantalla__Contenido
+{
+    margin-left: 10%;
+    height:100%;
+  /*flex-grow: 1;
+  margin-right: 20px;*/
+}
+
+#myInput
+{
+    width: 45vw;
+    height:4rem;
+    overflow-y: auto;
+    padding: .5rem;
+    box-sizing: border-box;
+    background-color: inherit;
+    font-size: 2rem;
+    font-family: var(--fuente-inter);
+    color:var(--color-uno);
+    margin-top:12%;
+    line-height: 1.5;
+    resize: none;
+    outline:none;
+    border-color: var(--color-negro);
+    max-height:65vh;
+    white-space: pre-wrap;
+    /*hyphens: auto;*/
+
+}
+#myInput:is(:focus, :valid) 
+{
+    border-color:#0A3871;
+    border-width: 2px;
+    padding: 1rem;
+}
+#myInput::-webkit-scrollbar{width:0px;}
+
+#myInput::placeholder 
+{
+    font-family: var(--fuente-inter);
+    color:var(--color-uno);
+    /*font-optical-sizing: auto;*/
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+    font-size: 2rem;
+}
+.Menu
+{
+
+    position:absolute;
+    bottom:2%;
+}
+.advertencia
+{
+    /* margin-top: 300px;*/
+    display:flex;
+    justify-content: space-between;
+    gap:1px;
+}
+.advertencia__señal
+{
+    font-family: var(--fuente-inter);
+    color:var(--color-uno);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+    font-size:100%;
+}
+.letras{height:auto;}
+.Botones
+{
+    width: 20vw;
+    text-align:center;
+    padding: 4vh 4vh;
+    font-family: var(--fuente-inter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+    font-size: 1rem;
+    border-radius: 34px;
+    border:2px solid var(--color-uno);
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+
+}
+#Encriptar
+{
+    color:var(--color-dos);
+    background-color:var(--color-uno);
+    margin-right: 2vw;
+}
+#Desencriptar
+{
+    color:var(--color-uno);
+    background-color:var(--color-tres);
+}
+
+#Copiar
+{
+    
+    
+    margin-bottom: 3%;
+    align-self: end;
+}
+#rectangulotablet
+{
+      display:none;
+      background-color: var(--color-dos); /* Color de fondo */
+      border-radius: 2rem; /* Bordes redondeados */
+      padding: 2vw 3vw;
+      /*margin-right: auto;*/
+      box-sizing: border-box;
+}
+/*#rectanguloOriginal 
+{
+    display: block;
+    width: 25vw; 
+    height: 90vh;
+   
+    background-color: var(--color-dos); 
+    border-radius:2rem; 
+    padding: 2vw 3vw;
+    text-align: center;
+    
+    
+
+}*/
+#rectanguloOriginal {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;  /* El rectángulo tendrá un ancho del 25% del ancho de la ventana */
+  height: 100vh; /* Altura del 90% de la ventana */
+  background-color: var(--color-dos); /* Color de fondo */
+  border-radius: 2rem; /* Bordes redondeados */
+  padding: 2vw 3vw;
+  box-sizing: border-box; /* Incluye el padding en el ancho y la altura */
+}
+
+.rectangulo h1, #rectangulotablet h1
+{
+    font-family: var(--fuente-inter);
+    margin: 3% 3%; /* Margen superior e inferior para los títulos */
+    color:var(--color-negro); /* Color del texto */
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-style: normal;
+}
+
+.Error{font-family: var(--fuente-inter);
+    margin: 3% 3%; /* Margen superior e inferior para los títulos */
+    color:red; /* Color del texto */
+    font-weight: 700;
+    font-size: 1rem;
+    font-style: normal;}
+
+.rectangulo h2, #rectangulotablet h2
+{
+    font-family: var(--fuente-inter);
+    color:var(--color-gris); /* Color del texto */
+    font-weight: 400;
+    font-size: 1rem;
+    font-style: normal;
+}
+.Muñeco 
+{
+    max-width: 100%; /* Ajusta la imagen para que no desborde el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+.gotica 
+{   
+    align-self: start; /* Alinea el texto al inicio de la columna */
+    font-family: var(--fuente-inter);
+    color: var(--color-gris); /* Color del texto */
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
+    width: 100%;
+    margin-top: 1vw;
+    max-height: 50%; /* Asegura que el textarea no se desborde */
+    overflow-y: auto;
+    padding: .5rem;
+    box-sizing: border-box; /* Incluye el padding en el tamaño del textarea */
+    background-color: inherit;
+    line-height: 1.5;
+    resize: none;
+    outline: none;
+    border: 1px solid var(--color-negro);
+    white-space: pre-wrap;
+}
+
+.ContenidoR
+{
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between; /* Cambia a space-between para que uno esté al inicio y otro al final */
+  height: 100%; /* Asegúrate de que el contenedor tenga suficiente altura */
+}
+/*CSS has properties for specifying the padding for each side of an element:
+
+padding-top
+padding-right
+padding-bottom
+padding-left*/
+
+.footer
+{
+  background-color: var(--color-fondo);
+  height: 3%; /* Altura del header */
+
+}
+
+
+
+/*Responsitividad*/
+@media (min-width: 401px) and (max-width: 800px)
+{
+                        .Pantalla
+                        {
+                            flex-direction: column;
+                        
+                        }
+                      .advertencia__señal, #rectangulotablet h2 {font-size: 1.5rem;}
+                      .Muñeco 
+                      {
+                            display: none; /* Oculta la imagen cuando el ancho es 800px o menor */
+                      }
+                      .Menu
+                      {
+                          position:absolute;
+                          top:60%;
+                      }
+                      #rectanguloOriginal
+                      {
+                            display:none;
+                      }
+                      #rectangulotablet
+                      {      display: flex;
+                            flex-direction: column;
+                            /*display:block;*/
+                      }
+                      #myInput 
+                      {
+                            width:80vw;
+                            max-height: 45vh;
+                            /*hyphens: auto;*/
+
+                      }
+                      .Botones
+                      {
+                            width: 40vw;
+                            padding: 2vh 4vh;
+                            font-size: 2vw;
+                            margin-bottom: 3vw;
+                      }
+                      #Copiar
+                      {
+                            /*position:static;
+                            margin-top:1vh;
+                            margin-left:23%;*/
+                            align-self: center;
+                      }
+
+                      .gotica
+                      {
+                            max-height:50vh;
+                      }
+} 
+
+@media( max-width: 400px)
+{
+                  html{font-size: 2vw;}
+                  .header{height: 10%; /* Altura del header */}
+                  .Logo{ width:16%;}
+                  .advertencia__señal, #rectangulotablet h2 {font-size: 2rem;}
+                  .Pantalla{ flex-direction: column;}
+                  .Muñeco {display: none; /* Oculta la imagen cuando el ancho es 800px o menor */}
+                  .Menu
+                  {
+                          position:absolute;
+                          top:60%;
+                  }
+                  #rectanguloOriginal { display:none;}
+                  #rectangulotablet
+                  {       display: flex;
+                    flex-direction: column;
+                          /*display:block;*/
+                          width:80vw;
+                  }
+                  #myInput 
+                  {
+                          width:80vw;
+                          max-height: 45vh;
+                          /*hyphens: auto;*/
+                  }
+                  .Botones
+                  {
+                          width: 80vw;
+                          padding: 2vh 4vh;
+                          font-size: 3vw;
+                          margin-bottom: 3vw;
+                  }
+                  #Copiar
+                  {
+                         /* position:static;
+                          margin-top:1vh;
+                          margin-left:5%;*/
+                          width: auto;
+                          align-self: center;
+                  }
+                  
+
+                  .gotica{max-height:70vh;}
+} 
